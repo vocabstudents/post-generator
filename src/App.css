@@ -1,5 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Noto+Sans+Arabic:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+input{
+  margin: 10px;
+  border: none;
+  border-bottom: .5px solid #e2e2e2;
+}
+
+label{
+  width: 20%;
+}
+
 .preview{
-  background-image: url('../public/assets/images/bg.png');
+  /* background-image: url('../public/assets/images/bg.png'); */
   background-size: cover;
   height: 342px;
+  font-family: 'Noto Sans Arabic';
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
 }
+
+.preview p{
+  width: 50%;
+}
+
+.colorWhite{
+  color: #fff;
+}
+
+button{
+  width: 100%;
+  border: .5px solid #e2e2e2;
+  margin-top: 20px;
+}
+
+/* .preview h2{
+  font-family: 'Luxurious Script', Courier, monospace;
+} */
+
+/* background image */
+.img-holder{
+  border: 1px solid #e2e2e2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.img-holder img{
+  width: 32%;
+  height: 120px;
+  cursor: pointer;
+  padding: 5px;
+}
+/* background image end */
