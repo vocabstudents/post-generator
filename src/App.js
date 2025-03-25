@@ -62,6 +62,19 @@ function App() {
   }
   const [selectedImage, setSelectedImage] = useState(imgPath.bg)
 
+  // style
+  const fontImgPath = {
+    bg1: "/assets/images/font-bg-1.png",
+    bg2: "/assets/images/font-bg-2.png",
+    bg3: "/assets/images/font-bg-3.png",
+  }
+  const fonts = {
+    f1: "Saleha",
+    f2: "Saleha",
+    f3: "Saleha",
+  }
+  const [selectedFontImage, setSelectedFontImage] = useState(fontImgPath.bg1)
+
   return (
     <div className='container'>
       <h1>Post Generator</h1>
@@ -109,6 +122,23 @@ function App() {
               </div>
             </div>
           </div>
+          {/* styles */}
+          <div className='card mt-3'>
+            <div className='card-header'>Styles</div>
+            <div className='card-body'>
+              <div className='img-holder'>
+                <img className="font-bg-image" src={fontImgPath.bg1} style={{border: selectedFontImage == fontImgPath.bg1 ? '2px solid #ff0041' : ''}} onClick={()=>{
+                  setSelectedFontImage(fontImgPath.bg1)
+                }} />
+                <img className="font-bg-image" src={fontImgPath.bg2} style={{border: selectedFontImage == fontImgPath.bg2 ? '2px solid #ff0041' : ''}} onClick={()=>{
+                  setSelectedFontImage(fontImgPath.bg2)
+                }} />
+                <img className="font-bg-image" src={fontImgPath.bg3} style={{border: selectedFontImage == fontImgPath.bg3 ? '2px solid #ff0041' : ''}} onClick={()=>{
+                  setSelectedFontImage(fontImgPath.bg3)
+                }} />
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* preview */}
@@ -118,7 +148,7 @@ function App() {
             <div className='card-body'>
               {/* <div className='preview' style={{backgroundImage: `url(${selectedImage})`}}> */}
               <div className='preview' style={{backgroundImage: `url(${selectedImage})`}}>
-                <h2 className='colorWhite'>{greeting}</h2>
+                <h2 className='colorWhite' style={{fontFamily: selectedFontImage == fontImgPath.bg1 ? fonts.f1 : ''}}>{greeting}</h2>
                 <p className='colorWhite'>{msg}</p>
                 <h4 className='colorWhite'>{name}</h4>
               </div>
